@@ -110,8 +110,6 @@ def preprocessing_fact(text):
         key_wd=['万元','元','美元','克','mg','kg','千克','公斤','斤']
         
         
-        num_thr_list=[5,10,15,30,50,70,100,500,700,1000,3000,5000,7000,10000,30000,50000,70000,100000,300000,500000,700000,1000000,3000000,
-                      5000000]
     
                 
         if text[i+1] in key_wd and text[i].isdigit():
@@ -122,7 +120,7 @@ def preprocessing_fact(text):
                 if i>num_thr_list:
                     text[i]=i
                     break
-            text[i]=text[i]+text[i+1]
+            text[i]=text[i]+“ ”+str(num_i)
             
 
                 
